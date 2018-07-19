@@ -18,9 +18,10 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 /**
- * @author ilyass.rahmoune JWTAuthenticationFilter get the JWT token from the
- *         request, validate it, load the user associated with the token, and
- *         pass it to Spring Security.
+ * @author ilyass.rahmoune 
+ * JWTAuthenticationFilter get the JWT token from the
+ * request, validate it, load the user associated with the token, and
+ * pass it to Spring Security.
  */
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
