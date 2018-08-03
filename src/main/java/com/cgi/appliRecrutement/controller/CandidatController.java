@@ -50,6 +50,11 @@ public class CandidatController {
 		return candidatService.retrieveAllCandidats();
 	}
 	
+	@GetMapping("/allcandidates")
+	public List<Candidat> retrieveAllCandidates() {	
+		return candidatService.retrieveAllCandidats();
+	}
+	
 	@PostMapping("/createCandidat")
 	public ResponseEntity<?> createCandidat(@Valid @RequestBody Candidat candidat) {
 		System.out.println(candidat);

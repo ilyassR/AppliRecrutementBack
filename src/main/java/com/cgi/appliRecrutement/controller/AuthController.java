@@ -59,7 +59,6 @@ public class AuthController {
 	
 	@PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-		System.out.println("Sign In");
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),
@@ -75,7 +74,6 @@ public class AuthController {
 	
 	@PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SingUpRequest signUpRequest) {
-		System.out.println("Sign Up");
         if(userRepository.existsByPseudo(signUpRequest.getUsername())) {
             return new ResponseEntity(new ApiResponse(false, "Username is already taken!"),
                     HttpStatus.BAD_REQUEST);
